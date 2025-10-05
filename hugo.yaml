@@ -1,0 +1,271 @@
+baseURL: https://mpaujan21.github.io/
+languageCode: en-US
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+title: mpaujan's Blog
+theme: "hugo-narrow"
+
+caches:
+  images:
+    dir: :cacheDir/images
+
+hasCJKLanguage: true
+enableEmoji: true
+
+permalinks:
+  posts: /posts/:slug/
+  pages: /:slug/
+
+pagination:
+  pagerSize: 3
+  path: "page"
+
+languages:
+  en:
+    languageCode: en-US
+    languageName: "English"
+    weight: 1
+
+taxonomies:
+  category: categories
+  tag: tags
+
+menus:
+  main:
+    - name: nav.posts
+      pageRef: /posts
+      weight: 20
+      params:
+        icon: posts
+    - name: nav.tags
+      pageRef: /tags
+      weight: 40
+      params:
+        icon: tags
+    - name: nav.archives
+      pageRef: /archives
+      weight: 50
+      params:
+        icon: archive
+
+  # footer menu
+  footer:
+    -
+
+  # footer social link
+  social:
+    - name: GitHub
+      url: https://github.com/mpaujan21
+      weight: 10
+      params:
+        icon: github
+    - name: Twitter
+      url: https://twitter.com/mpaujan21
+      weight: 20
+      params:
+        icon: twitter
+    - name: Email
+      url: mailto:xees6fxee@gmail.com
+      weight: 30
+      params:
+        icon: email
+
+params:
+  # Basic site info with SEO
+  description: "Bug bounty blog and web security write-ups by mpaujan."
+  keywords:
+    [
+      "Bug Bounty",
+      "Web Security",
+      "Hacking",
+      "Pentesting",
+      "Write-ups",
+      "AppSec",
+    ]
+  defaultAuthor: "mpaujan"
+  language: "en-US"
+  shortName: "mpaujan"
+  images:
+    - "/images/og-default.avif"
+
+  logo:
+    image: "/images/cat.png"
+    link: "/"
+  favicon:
+    svg: "/images/cat.png"
+
+  author:
+    name: "mpaujan"
+    title: ""
+    description: "Hello! I'm a newbie Bug Bounty Hunter who loves finding web application vulnerabilities. Feel free to reach out if you'd like to collaborate!"
+    avatar: "/images/cat.png"
+    social:
+      - name: "GitHub"
+        url: "https://github.com/mpaujan21"
+        icon: "github"
+      - name: "Twitter"
+        url: "https://twitter.com/mpaujan21"
+        icon: "twitter"
+      - name: "Email"
+        url: "mailto:xees6fxee@gmail.com"
+        icon: "email"
+
+  # UI Components Control
+  showThemeSwitch: true # Set to false to hide theme style switcher (palette icon)
+  showDarkModeSwitch: true # Set to false to hide dark mode switcher (sun/moon icon)
+  showLanguageSwitch: false # Set to false to hide language switcher
+  languageSwitchMode: "dropdown" # Language switch mode: "dropdown" (show panel) or "cycle" (direct cycle)
+
+  # Header sticky effect
+  stickyHeader: true # Set to true to enable sticky navigation bar
+
+  # default color scheme
+  colorScheme: "claude"
+  themes:
+    default:
+      name: "Default"
+      order: 1
+    claude:
+      name: "Claude"
+      order: 2
+    bumblebee:
+      name: "Bumblebee"
+      order: 3
+    emerald:
+      name: "Emerald"
+      order: 4
+    nord:
+      name: "Nord"
+      order: 5
+    sunset:
+      name: "Sunset"
+      order: 6
+    abyss:
+      name: "Abyss"
+      order: 7
+    dracula:
+      name: "Dracula"
+      order: 8
+    amethyst:
+      name: "Amethyst"
+      order: 9
+    slate:
+      name: "Slate"
+      order: 10
+    twitter:
+      name: "Twitter"
+      order: 11
+
+  home:
+    recentPostsCount: 3 # Number of recent posts to show on the home page
+
+  post:
+    showRelated: false # show related posts
+    relatedPostsCount: 3 # posts number
+
+    license:
+      show: false
+      author: "Hugo Narrow"
+      name: "CC BY-NC-SA 4.0"
+      description: "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Please attribute the source, use non-commercially, and maintain the same license."
+      url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+      displayName: "CC BY-NC-SA 4.0"
+
+  # comments
+  comments:
+    enabled: false
+
+  analytics:
+    enabled: true
+    google:
+      enabled: true
+      id: "G-VZHHCNR480"
+
+  katex:
+    enabled: false
+    delimiters:
+      - left: "$$"
+        right: "$$"
+        display: true
+      - left: "$"
+        right: "$"
+        display: false
+      - left: "\\("
+        right: "\\)"
+        display: false
+      - left: "\\["
+        right: "\\]"
+        display: true
+
+  mermaid:
+    enabled: false
+
+  # GLightbox
+  lightbox:
+    enabled: false
+    loop: true
+    width: 80vw
+    height: 80vh
+    touchNavigation: true
+    draggable: true
+    zoomable: true
+    preload: true
+    descPosition: bottom
+
+  # Justified Gallery
+  justified_gallery:
+    enabled: false
+    rowHeight: 300
+    gutter: 30
+    lastRow: center
+    transitionDuration: 0.3s
+    resizeDebounce: 100
+    rowHeightTolerance: 0.25
+    maxRowsCount: 999999
+    calculateItemsHeight: false
+
+  codeblock:
+    collapse:
+      enabled: true
+      defaultState: expanded # expanded, collapsed
+      autoCollapseLines: 30
+      autoCollapseHeight: 400
+      collapsedHeight: 120
+
+  readingProgress:
+    enabled: true
+    height: 3
+    showOnHomepage: false
+    smoothScroll: true
+    hideOnComplete: false
+
+markup:
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
+    ordered: false
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    codeFences: true
+    guessSyntax: false
+    lineNos: false
+    lineNumbersInTable: false # Set to false
+    noClasses: false
+    style: github # No need to change
+    tabWidth: 2
+
+outputs:
+  home: ["HTML", "RSS", "JSON", "WebAppManifest"]
+
+outputFormats:
+  WebAppManifest:
+    mediaType: "application/manifest+json"
+    baseName: "site"
+    isPlainText: true
+
+module:
+  hugoVersion:
+    extended: true
+    min: 0.146.0
